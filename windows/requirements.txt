@@ -1,0 +1,4 @@
+psutil==5.8.0
+selenium==3.141.0
+wxpusher==2.2.0
+func-timeout==4.3.5

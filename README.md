@@ -1,10 +1,10 @@
 <!--
  * @Author       : magicwenli
  * @Date         : 2021-01-07 20:53:34
- * @LastEditTime : 2021-01-07 21:04:07
+ * @LastEditTime : 2021-01-23 20:01:46
  * @Description  : 
 -->
-# XJTU-DHA-auto-complete
+# daily-check-xjtu
 
 
 ## 功能
@@ -26,6 +26,18 @@
 
 
 ## 部署方法
+
+### 使用docker部署
+
+运行
+```bash
+git clone https://github.com/magicwenli/daily-check-xjtu.git
+cd linux
+sudo docker build -t xjtu/daily-check:v1 .
+docker build -d -p 4444:4444 -v /dev/shm:/dev/shm 
+```
+
+### windows
 1. 安装Chrome
 2. 前往 https://chromedriver.storage.googleapis.com/index.html 下载最新Chrome自动控制驱动，解压后放到系统环境变量目录下（如C:\windows\system32\）
 
