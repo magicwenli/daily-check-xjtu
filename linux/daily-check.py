@@ -1,7 +1,7 @@
 '''
 Author       : magicwenli
 Date         : 2021-01-07 20:35:58
-LastEditTime : 2021-01-07 20:46:43
+LastEditTime : 2021-01-27 20:13:58
 Description  : 多用户自动打卡脚本
                   使用 wxpusher 进行微信推送
                   Forked from JerryYang666/XJTU-DHA-auto-complete
@@ -10,7 +10,7 @@ Description  : 多用户自动打卡脚本
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import psutil,time,base64,random,signal
+import time,base64,random,signal
 from wxpusher import WxPusher
 
 

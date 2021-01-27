@@ -37,7 +37,7 @@ pd = ['6K+36L6T5YWl6KaB', '57yW56CB5oiW6Kej']
 ### 拉取并运行
 
 ```shell
-sudo docker run -d --name dcheck -p 4444:4444 -v /opt/dailycheck:/dailycheck -v /dev/shm:/dev/shm yangwesley/daily-check:v2
+sudo docker run -d --name dcheck -p 4444:4444 -v /opt/dailycheck:/dailycheck -v /dev/shm:/dev/shm yangwesley/daily-check:latest
 ```
 运行完成后等待1~2分钟。
 
