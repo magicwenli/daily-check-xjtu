@@ -7,11 +7,14 @@
 git clone https://github.com/magicwenli/daily-check-xjtu.git
 ```
 
-### 修改参数
+### 建立文件夹并修改参数
 
 ```shell
-cd daily-check-xjtu
-vim linux/dailycheck/daily-check.py
+mv daily-check-xjtu/linux /opt/dailycheck
+chmod -R 777 /opt/dailycheck
+
+cd /opt/dailycheck
+vim daily-check.py
 ```
 **XJTU OAuth 部分**
 
@@ -34,7 +37,7 @@ pd = ['6K+36L6T5YWl6KaB', '57yW56CB5oiW6Kej']
 ### 拉取并运行
 
 ```shell
-sudo docker run -d --name dcheck -p 4444:4444  -v /dev/shm:/dev/shm yangwesley/daily-check:v2
+sudo docker run -d --name dcheck -p 4444:4444 -v /opt/dailycheck:/dailycheck -v /dev/shm:/dev/shm yangwesley/daily-check:v2
 ```
 运行完成后等待1~2分钟。
 
@@ -42,7 +45,7 @@ sudo docker run -d --name dcheck -p 4444:4444  -v /dev/shm:/dev/shm yangwesley/d
 
 ```shell
 sudo docker exec -it dcheck bash
-sh /opt/dailycheck/entrypoint.sh
+sh /dailycheck/entrypoint.sh
 exit
 ```
 
