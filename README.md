@@ -1,9 +1,3 @@
-<!--
- * @Author       : magicwenli
- * @Date         : 2021-01-07 20:53:34
- * @LastEditTime : 2021-01-23 20:01:46
- * @Description  : 
--->
 # daily-check-xjtu
 
 
@@ -21,21 +15,15 @@
 ---------------
 
 * **使用前需手动打卡过**，确保除体温及健康码颜色之外的其他信息能自动加载  
-* 在Windows 10 ltsc 下测试通过
-* 使用 Unix 系统需要修改函数装饰器，确保填报超时后能重新填报, 见 [CSDN](https://www.cnblogs.com/lyxdw/p/10033118.html)
+* 在 Windows 10 ltsc 下测试通过
+* 在 ubuntu18.04 下测试通过
 
 
 ## 部署方法
 
-### 使用docker部署
+### linux
 
-运行
-```bash
-git clone https://github.com/magicwenli/daily-check-xjtu.git
-cd linux
-sudo docker build -t xjtu/daily-check:v1 .
-docker build -d -p 4444:4444 -v /dev/shm:/dev/shm 
-```
+see [Linux version](linux/README.md)
 
 ### windows
 1. 安装Chrome

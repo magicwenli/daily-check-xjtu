@@ -1,1 +1,0 @@
-12 10,17 * * * python3 daily-check-xjtu.py
