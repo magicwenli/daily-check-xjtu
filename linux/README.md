@@ -1,13 +1,13 @@
 # Linux version
 > 使用 Docker 搭建
 
-### 克隆本仓库
+## 克隆本仓库
 
 ```shell
 git clone https://github.com/magicwenli/daily-check-xjtu.git 
 ```
 
-### 建立文件夹并修改参数
+## 建立文件夹并修改参数
 
 ```shell
 mv daily-check-xjtu/linux /opt/daily-check-xjtu
@@ -34,18 +34,22 @@ pd = ['6K+36L6T5YWl6KaB', '57yW56CB5oiW6Kej']
 
 修改cron.txt为想要定时任务的时间。
 
-### 拉取并运行
+## 拉取并运行
 
 ```shell
 sudo docker run -d --name dcheck -p 4444:4444 -v /opt/dailycheck:/dailycheck -v /dev/shm:/dev/shm yangwesley/daily-check:latest
 ```
-运行完成后等待1~2分钟。
+
+安装`selenium`和`wxpusher`
+```shell
+pip3 install selenium wxpusher
+```
 
 接下来启动脚本`entrypoint.sh`
 
 ```shell
-sudo sh /daily-check-xjtu/entrypoint.sh
+sudo bash /daily-check-xjtu/entrypoint.sh
 ```
 
-### 后续修改
+## 后续修改
 修改`/opt/daily-check-xjtu`中的配置，然后运行`entrypoint.sh`。
