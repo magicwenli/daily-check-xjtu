@@ -4,16 +4,16 @@
 ### 克隆本仓库
 
 ```shell
-git clone https://github.com/magicwenli/daily-check-xjtu.git
+git clone https://github.com/magicwenli/daily-check-xjtu.git 
 ```
 
 ### 建立文件夹并修改参数
 
 ```shell
-mv daily-check-xjtu/linux /opt/dailycheck
-chmod -R 777 /opt/dailycheck
+mv daily-check-xjtu/linux /opt/daily-check-xjtu
+chmod -R 777 /opt/daily-check-xjtu
 
-cd /opt/dailycheck
+cd /opt/daily-check-xjtu
 vim daily-check.py
 ```
 **XJTU OAuth 部分**
@@ -41,13 +41,11 @@ sudo docker run -d --name dcheck -p 4444:4444 -v /opt/dailycheck:/dailycheck -v 
 ```
 运行完成后等待1~2分钟。
 
-接下来进入容器，运行启动脚本`entrypoint.sh`
+接下来启动脚本`entrypoint.sh`
 
 ```shell
-sudo docker exec -it dcheck bash
-sh /dailycheck/entrypoint.sh
-exit
+sudo sh /daily-check-xjtu/entrypoint.sh
 ```
 
 ### 后续修改
-修改主机`/opt/dailycheck`中的配置，然后进入容器运行`entrypoint.sh`。
+修改`/opt/daily-check-xjtu`中的配置，然后运行`entrypoint.sh`。

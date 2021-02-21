@@ -1,7 +1,7 @@
 '''
 Author       : magicwenli
 Date         : 2021-01-07 20:35:58
-LastEditTime : 2021-01-27 20:13:58
+LastEditTime : 2021-02-21 16:13:58
 Description  : 多用户自动打卡脚本
                   使用 wxpusher 进行微信推送
                   Forked from JerryYang666/XJTU-DHA-auto-complete
@@ -19,10 +19,10 @@ from wxpusher import WxPusher
 ua = ['a', 'b', 'c']
 # password with BASE64 encoding
 pd = ['d', 'e', 'f']
-######### 
+#########
 
 
-######### Wxpusher 
+######### Wxpusher
 appToken = 'AT_1x'
 pid = ['UID_a',
        'UID_b','UID_c']
@@ -31,7 +31,7 @@ themeIds = [123]
 
 # 登录页面，带参跳转
 url = "http://wxpusher.zjiecode.com/api/send/message"
-login = "http://jkrb.xjtu.edu.cn/EIP/user/index.htm"  
+login = "http://jkrb.xjtu.edu.cn/EIP/user/index.htm"
 
 temperature = '0'
 tryNum = 1
@@ -162,7 +162,7 @@ driver = webdriver.Remote(
 if __name__ == '__main__':
     i = 0
     error = 0
-   
+
 
     while i != len(ua):
         username = base64.b64decode(ua[i]).decode("utf-8")
