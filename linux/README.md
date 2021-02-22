@@ -5,7 +5,6 @@
 - python3
   - selenium, wxpusher
 - docker
-- fish shell
 
 ## 克隆本仓库
 

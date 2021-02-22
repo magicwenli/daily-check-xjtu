@@ -1,2 +1,1 @@
-SHELL=/usr/bin/fish
-15 10,17 * * * echo -e "\n===="(date "+%m/%d/%y %H:%M:%S")"====" >> /opt/daily-check-xjtu/log.txt; python3 /opt/daily-check-xjtu/daily-check.py >> /opt/daily-check-xjtu/log.txt
+15 10,17 * * * echo "====$(date "+%Y-%m-%d %H:%M:%S")===="  >>  /opt/daily-check-xjtu/log.txt && python3 /opt/daily-check-xjtu/daily-check.py >> /opt/daily-check-xjtu/log.txt
