@@ -1,6 +1,12 @@
 # Linux version
 > 使用 Docker 搭建
 
+需求：
+- python3
+  - selenium, wxpusher
+- docker
+- fish shell
+
 ## 克隆本仓库
 
 ```shell
